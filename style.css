@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll; /* Enable vertical scroll */
+    scroll-snap-type: y mandatory; /* Enable scroll snapping */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    scroll-snap-align: start; /* Align each page at the start of the viewport */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+.page .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Add a background to content for better visibility */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.page .content h1 {
+    margin-bottom: 20px;
+}
+
+.page .content ul.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.page .content ul.nav li {
+    margin: 0;
+}
+
+.page .content ul.nav li a {
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent; /* Transparent background */
+}
+
+.page .content ul.nav li a:hover {
+    background-color: #333; /* Background on hover */
+    color: #fff;
+}
